@@ -50,8 +50,7 @@ def predict_datapoint():
         return render_template('home.html', results=results[0])
 
     except Exception as e:
-        print("Error:", e)
-        return render_template('home.html', results="Error occurred")
+        return str(e)
     
 
 if __name__=="__main__":
